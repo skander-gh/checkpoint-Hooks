@@ -3,6 +3,8 @@ import MovieList from './Movie list';
 import Nave from './Navbar';
 import Add from './Add';
 import { useState } from 'react';
+import { Route } from 'react-router-dom';
+import Gosomewhere from './Gosomewhere';
 
 
 function App(){
@@ -56,9 +58,10 @@ function App(){
     <div className="App">
     <Nave setsearch={setsearch} rate={rate} setrate={setrate}> </Nave>
     <Add  moviedata={moviedata} setmoviedata={setmoviedata} > </Add>
-    <MovieList   moviedata={moviedata} search={search} rate={rate} setmoviedata={setmoviedata} > </MovieList> 
+  <Route  path='/' exact  >   <MovieList   moviedata={moviedata} search={search} rate={rate} setmoviedata={setmoviedata} > </MovieList> </Route> 
     
-   
+    <Route path='/Go/:x'  render={(props)=> <Gosomewhere moviedata={moviedata} {...props} >  </Gosomewhere>} />  
+  
    </div>
   );
 }

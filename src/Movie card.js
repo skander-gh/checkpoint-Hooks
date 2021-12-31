@@ -1,5 +1,6 @@
 import {Card,Button} from 'react-bootstrap' ;
 import ReactStars from "react-rating-stars-component";
+import { Link } from 'react-router-dom';
 function MovieCard({el}){
     return(
         <div>
@@ -11,7 +12,7 @@ function MovieCard({el}){
     <ReactStars
     count={5}
     value={el.rate}></ReactStars>
-    <Button variant="primary">Go somewhere </Button>
+   <Link to={`/Go/${el.id}`}> <Button variant="primary">Go somewhere </Button> </Link>
   </Card.Body>
 </Card>
     

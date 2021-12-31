@@ -6,7 +6,7 @@ const [Title, setTitle] = useState('');
 const [Photo, setPhoto] = useState('');
 const [Description, setDescription] = useState('');
 const [Rate, setrate] = useState('');
-const newMovie=()=>{ setmoviedata(   [...moviedata, {title: Title,posterUrl:Photo ,rate:Rate ,description:Description }]   )};
+const newMovie=()=>{ setmoviedata(   [...moviedata, {Title: Title,posterUrl:Photo ,rate:Rate ,description:Description }]   )};
 const [show, setShow] = useState(false);
 const handleClose = () => setShow(false);
 const handleShow = () => setShow(true);
